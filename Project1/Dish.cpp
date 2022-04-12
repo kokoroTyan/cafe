@@ -1,6 +1,14 @@
 #include "Dish.h"
 
+int Dish::count = 0;
+
+int Dish::getCount() {
+	return count;
+}
+
+
 Dish::Dish() {
+	count++;
 	name = "no name";
 	weight = 0;
 	callories = 0;
@@ -9,6 +17,7 @@ Dish::Dish() {
 }
 
 Dish::Dish(string name, int weight, int callories, double price, bool available) {
+	count++;
 	this->name = name;
 	this->weight = weight;
 	this->callories = callories;
@@ -17,7 +26,7 @@ Dish::Dish(string name, int weight, int callories, double price, bool available)
 }
 
 Dish::~Dish() {
-
+	count--;
 }
 
 string Dish::getName() {
@@ -31,7 +40,7 @@ int Dish::getWeight() {
 	return weight;
 }
 void Dish::setWeight(int weight) {
-	if (weight >= 50 && weight <= 1000) {
+	if (weight >= MIN_DISH_WEIGHT && weight <= MAX_DISH_WEIGHT) {
 		this->weight = weight;
 	}
 }
@@ -40,7 +49,7 @@ int Dish::getCallories() {
 	return callories;
 }
 void Dish::setCallories(int callories) {
-	if (callories >= 50 && callories <= 1000) {
+	if (callories >= MIN_CALLORIES && callories <= MAX_CALLORIES) {
 		this->callories = callories;
 	}
 }
@@ -65,4 +74,6 @@ string Dish::getInfo() {
 	return name + ": weight = " + to_string(weight) + " g, callories = " +
 		to_string(callories) + ", price = " + to_string(price) + "$, " + (available ? "is available." : "isn't available.");
 }
+
+
 

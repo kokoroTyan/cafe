@@ -43,11 +43,12 @@ void Rest::setName(string name) {
 }
 
 string Rest::getInfo() {
-	if (list != NULL || size <= 0) {
-		return "Restaurant '" + name + "' is empty.";
+	if (list == NULL || size == 0) {
+		return "Group " + name + " is empty.";
 	}
-	string msg = "Dishes of restaurant '" + name + "':\n";
-	for (int i = 0; i < size; i++) {
+	string msg = "Students of group " + name + ":\n";
+	for (int i = 0; i < size; i++)
+	{
 		if (list[i].isAvailable()) {
 			msg += list[i].getInfo() + "\n";
 		}
