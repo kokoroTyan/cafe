@@ -1,6 +1,7 @@
 #include "Header.h"
 
 class Dish {
+	friend void changePrice(Dish& dish);
 private:
 	static int count;
 
@@ -15,8 +16,6 @@ public:
 
 	static const int MAX_CALLORIES = 800;
 	static const int MIN_CALLORIES = 40;
-
-	int getCount();
 
 	Dish();
 	Dish(string name, int weight, int callories, double price, bool available);

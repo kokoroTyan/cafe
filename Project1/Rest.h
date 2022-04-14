@@ -1,6 +1,7 @@
 #include "Dish.h"
 class Rest
 {
+	friend class Manager;
 private:
 	int size;
 	string name;
