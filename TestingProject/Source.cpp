@@ -47,3 +47,6 @@ int main() {
 	cout << arr.getInfo() << endl;
 	return 0;
 }
+
+//Stack and queue using dinamic arrays
+//Stack - push(int item); pop() -> item; isEmpty(bool); clear(clears queue); size(return int); head(first item); get(int index) -> item;
