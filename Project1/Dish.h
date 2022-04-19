@@ -1,7 +1,6 @@
 #include "Header.h"
 
 class Dish {
-	friend void changePrice(Dish& dish);
 private:
 	static int count;
 
