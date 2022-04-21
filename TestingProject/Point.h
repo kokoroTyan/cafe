@@ -16,6 +16,9 @@ public:
 	Point sum(Point point2) const;
 	Point minus(Point point2) const;
 	int multiply(Point point2) const;
+
+	Point operator +(Point point2) const;
+
 	string getInfo();
 };
 
