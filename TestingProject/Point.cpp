@@ -31,7 +31,14 @@ Point Point::operator +(Point point2) const {
 Point Point::minus(Point point2) const {
 	return Point(x - point2.x, y - point2.y);
 }
+Point Point::operator -(Point point2) const {
+	return Point(x - point2.x, y - point2.y);
+}
+
 int Point::multiply(Point point2) const {
+	return x * point2.x + y * point2.y;
+}
+int Point::operator *(Point point2) const {
 	return x * point2.x + y * point2.y;
 }
 

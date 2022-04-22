@@ -10,9 +10,9 @@ int main() {
 	cout << point1.getInfo() << endl;
 	cout << point2.getInfo() << endl;
 	
-
-	point3 = point1 + point2;
-	cout << point3.getInfo() << endl;
+	point3 = point2 - point1;
+	int result = point1 * point2;
+	cout << point3.getInfo() << endl << result;
 
 	return 0;
 }

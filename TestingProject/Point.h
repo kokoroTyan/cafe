@@ -18,6 +18,8 @@ public:
 	int multiply(Point point2) const;
 
 	Point operator +(Point point2) const;
+	Point operator -(Point point2) const;
+	int operator *(Point point2) const;
 
 	string getInfo();
 };
