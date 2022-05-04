@@ -3,7 +3,9 @@
         
 
 int main() {
+    Dish dish;
     FirmDish fDish1;
+    cout << fDish1.getInfo() << endl;
     
     /*Rest r1("Restaurant 1");
 

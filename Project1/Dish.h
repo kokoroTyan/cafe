@@ -3,7 +3,7 @@
 class Dish {
 private:
 	static int count;
-
+protected:
 	string name;
 	int weight;
 	int callories;
@@ -21,7 +21,7 @@ public:
 	~Dish();
 
 	string getName();
-	void getName(string name);
+	void setName(string name);
 
 	int getWeight();
 	void setWeight(int weight);

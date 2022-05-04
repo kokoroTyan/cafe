@@ -32,7 +32,7 @@ Dish::~Dish() {
 string Dish::getName() {
 	return name;
 }
-void Dish::getName(string name) {
+void Dish::setName(string name) {
 	this->name = name;
 }
 
