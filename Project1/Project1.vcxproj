@@ -140,11 +140,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Dish.h" />
+    <ClInclude Include="FirmDish.h" />
     <ClInclude Include="Header.h" />
+    <ClInclude Include="MagicDish.h" />
+    <ClInclude Include="Manager.h" />
     <ClInclude Include="Rest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dish.cpp" />
+    <ClCompile Include="FirmDish.cpp" />
+    <ClCompile Include="MagicDish.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Rest.cpp" />

@@ -1,7 +1,11 @@
-#include "Manager.h"
+#include "Rest.h"
+#include "FirmDish.h"
+        
 
 int main() {
-    Rest r1("Restaurant 1");
+    FirmDish fDish1;
+    
+    /*Rest r1("Restaurant 1");
 
     Dish d1("Pudding", 250, 144, 5.7, true);
     Dish d2("Salad", 300, 190, 7.1, true);
@@ -13,13 +17,11 @@ int main() {
     r1.add(d2);
     r1.add(d3);
     r1.add(d4);
-    r1.add(d5);
+    r1.add(d5);*/
 
     /*cout << r1.getInfo() << endl;
     cout << "Count of dishes right nom: " << Dish::getCount() << endl;*/
 
-    Manager manager;
-    manager.calculateAvgWeight(r1);
     
     return 0;
 }
