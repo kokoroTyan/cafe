@@ -17,5 +17,6 @@ public:
 	double getRating();
 	void setRating(double rating);
 
-	string getInfo();
+	virtual string getInfo();
+	//virtual makes a function available for polimorfism
 };

@@ -1,6 +1,7 @@
+#pragma once
 #include "Header.h"
 
-class Dish {
+class Dish{
 private:
 	static int count;
 protected:

@@ -16,6 +16,6 @@ public:
 	int getDuration();
 	void setDuration(int duration);
 
-	string getInfo();
+	virtual string getInfo();
 };
 

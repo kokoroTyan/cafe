@@ -1,11 +1,22 @@
 #include "Rest.h"
 #include "FirmDish.h"
         
+void testing(Dish** list, int size) {
+    for (int i = 0; i < size;i++) {
+        cout << list[i]->getInfo() << endl;
+    }
+}
 
 int main() {
-    Dish dish;
+    Dish** d1 = new Dish*[3];
+    d1[0] = new FirmDish("Sushi", 100, 144, 15, true, "Mr.Cook", 4.8);
+    d1[1] = new Dish("Rice", 50, 144, 5, true);
+    d1[2] = new Dish("Pizza", 50, 144, 10, true);
+    testing(d1, 3);
+
+    /*Dish dish();
     FirmDish fDish1;
-    cout << fDish1.getInfo() << endl;
+    cout << fDish1.getInfo() << endl;*/
     
     /*Rest r1("Restaurant 1");
 
