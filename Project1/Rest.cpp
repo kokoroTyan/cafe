@@ -1,24 +1,32 @@
 #include "Rest.h"
+int Rest::count = 0;
 
+int Rest::getCount() {
+	return count;
+}
 
 Rest::Rest() {
+	count++;
 	name = "no restaurant name";
 	size = 0;
 	list = NULL;
 }
 
 Rest::Rest(string name) {
+	count++;
 	this->name = name;
 	size = 0;
 	list = NULL;
 }
 
 Rest::Rest(string name, Dish* list, int size) {
+	count++;
 	this->name = name;
 	this->size = size;
 	this->list = list;
 }
 Rest::~Rest() {
+	count--;
 	if (list != NULL) {
 		delete[] list;
 	}

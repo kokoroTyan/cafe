@@ -25,5 +25,5 @@ void FirmDish::setRating(double rating) {
 }
 
 string FirmDish::getInfo() {
-	return Dish::getInfo() + "\nAuthor: " + chiefName + ", dish rating = " + to_string(rating);
+	return Dish::getInfo() + "Author: " + chiefName + ", dish rating = " + to_string(rating) + "\n";
 }

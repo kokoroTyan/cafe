@@ -3,6 +3,7 @@ class Rest
 {
 	friend class Manager;
 private:
+	static int count;
 	int size;
 	string name;
 	Dish* list;
@@ -20,6 +21,8 @@ public:
 	void setName(string name);
 
 	string getInfo();
+
+	static int getCount();
 protected:
 };
 

@@ -25,5 +25,5 @@ void MagicDish::setDuration(int duration) {
 }
 
 string MagicDish::getInfo() {
-	return Dish::getInfo() + "\nSuperpower: " + power + ", power duration = " + to_string(duration);
+	return Dish::getInfo() + "Superpower: " + power + ", power duration = " + to_string(duration) + "\n";
 }

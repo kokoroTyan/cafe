@@ -72,7 +72,7 @@ void Dish::setAvailable(bool available) {
 
 string Dish::getInfo() {
 	return name + ": weight = " + to_string(weight) + " g, callories = " +
-		to_string(callories) + ", price = " + to_string(price) + "$, " + (available ? "is available." : "isn't available.");
+		to_string(callories) + ", price = " + to_string(price) + "$, " + (available ? "is available." : "isn't available.") + "\n";
 }
 
 
