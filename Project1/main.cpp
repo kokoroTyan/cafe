@@ -1,40 +1,45 @@
 #include "Rest.h"
 #include "FirmDish.h"
-        
-void testing(Dish** list, int size) {
-    for (int i = 0; i < size;i++) {
-        cout << list[i]->getInfo() << endl;
-    }
-}
+#include "MagicDish.h"
+
+
+//1-lvl: login: first, password: 1user
+//2-lvl: login: second, password: 2user
+//3-lvl: login: third, password: manager
 
 int main() {
-    Dish** d1 = new Dish*[3];
-    d1[0] = new FirmDish("Sushi", 100, 144, 15, true, "Mr.Cook", 4.8);
-    d1[1] = new Dish("Rice", 50, 144, 5, true);
-    d1[2] = new Dish("Pizza", 50, 144, 10, true);
-    testing(d1, 3);
+    string login, password;
+    string beginningFirst = "Successfully signed in as a 1-lvl user!\nYour abilities are:\nTo check all the dishes(1)\nTo check all the restaurants(2)";
+    string beginningSecond = "Successfully signed in as a 2-lvl user!\nYour abilities are:\nTo check all the dishes(1)\nTo check all the restaurants(2)\nTo add data(3)\nTo search for data(4)\nTo edit data(5)\nTo work with files(6)";
+    string beginningThird = "Successfully signed in as a 3-lvl user(manager)!\nYour abilities are:\nTo check all the dishes(1)\nTo check all the restaurants(2)\nTo add data(3)\nTo search for data(4)\nTo edit data(5)\nTo work with files(6)\nTo delete data(7)";
 
-    /*Dish dish();
-    FirmDish fDish1;
-    cout << fDish1.getInfo() << endl;*/
-    
-    /*Rest r1("Restaurant 1");
+
+    Rest r1("Restaurant 1");
 
     Dish d1("Pudding", 250, 144, 5.7, true);
-    Dish d2("Salad", 300, 190, 7.1, true);
+    MagicDish d2("Salad", 300, 190, 7.1, true, "flyable", 5);
     Dish d3("Pizza", 542, 800, 13.0, true);
     Dish d4("Coffe", 100, 50, 2.0, true);
     Dish d5("Cake", 300, 520, 4.3, true);
 
-    r1.add(d1);
-    r1.add(d2);
-    r1.add(d3);
-    r1.add(d4);
-    r1.add(d5);*/
-
-    /*cout << r1.getInfo() << endl;
-    cout << "Count of dishes right nom: " << Dish::getCount() << endl;*/
-
-    
+    /*r1.add(d2);
+    cout << r1.getInfo() << endl;
+    cout << "Count of dishes right now: " << Dish::getCount() << endl;*/
+    do {
+        cout << "Sign out as a 1-lvl user, a 2-lvl, or a 3-lvl user(manager):\nLogin: ";
+        cin >> login;
+        cout << "Password: ";
+        cin >> password;
+        system("cls");
+    } while ((login != "first" && password != "1user") || (login != "second" && password != "2user") || (login != "third" && password != "manager"));
+    if (login == "first" && password == "1user") {
+        cout << beginningFirst << endl;
+    }
+    else if (login == "second" && password == "2user") {
+        cout << beginningSecond << endl;
+    }
+    else if (login == "third" && password == "manager") {
+        cout << beginningThird << endl;
+    }
     return 0;
 }
