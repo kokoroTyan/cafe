@@ -132,26 +132,49 @@ int main() {
 		cin >> index;
 		cout << "What exactly would you like to change(name, weight, callories, price, availability)? ";
 		cin >> answer;
+		system("cls");
 		if (answer=="name") {
-		
+			cout << "Input dishes' new name: ";
+			cin >> name;
+			r1.get(index)->setName(name);
+			cout << r1.getInfo();
 		} else if (answer == "weight") {
-
+			cout << "Input dishes' new weight: ";
+			cin >> weight;
+			r1.get(index)->setWeight(weight);
+			cout << r1.getInfo();
 		} else if (answer == "callories") {
-
+			cout << "Input dishes' new ammount of callories: ";
+			cin >> callories;
+			r1.get(index)->setCallories(callories);
+			cout << r1.getInfo();
 		} else if (answer == "price") {
-		
+			cout << "Input dishes' new price: ";
+			cin >> price;
+			r1.get(index)->setPrice(price);
+			cout << r1.getInfo();
 		} else if (answer == "availability") {
-
+			cout << "Input dishes' new status(available - 1, not available - 0): ";
+			cin >> available;
+			r1.get(index)->setAvailable(available);
+			cout << r1.getInfo();
 		}
 		else {
 			cout << "Sorry, this option isn't allowed for you :(" << endl;
 		}
 	}
 	else if (option == 6) {
-
+	cout << "We're working on this..." << endl;
 	}
 	else if (option == 7 && login != "first" && login != "second") {
-
+		cout << "That's how the restaurant looks now\n";
+		cout << r1.getInfo();
+		cout << "Input the index of the dish you want to remove: ";
+		cin >> index;
+		r1.remove(r1.get(index));
+		system("cls");
+		cout << "That's how the restaurant looks after deleting\n";
+		cout << r1.getInfo();
 	}
 	else {
 		option == 0;
